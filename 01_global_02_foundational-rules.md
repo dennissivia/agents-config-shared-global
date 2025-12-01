@@ -10,17 +10,10 @@ If a rule appears to conflict with project-specific guidance, follow the stricte
 - Avoid injection, validate all external data.
 - Prefer secure defaults.
 
-## 2. Follow the Multi-Phase Workflow
-Each task must follow the defined sequence (see `10_dev_workflow.md` for details):
-1. **Planning** – understand scope, constraints, risks.  
-2. **Analysis** – inspect existing code, architecture, dependencies.  
-3. **Design** – propose structure, data flows, interfaces.  
-4. **Implementation** – produce incremental, reviewable code.  
-5. **Refinement** – validate correctness, refactor safely.  
-6. **Quality Gates** – formatting, tests, linting.  
-7. **Git Operations** – only after explicit confirmation.
-
-Skipping phases is not allowed unless explicitly instructed.
+## 2. Follow the Workflow Package
+- Use the ordered phases defined by the repository’s workflow package (`10_*` index and its `20–69` stage rules). Do not reorder or skip phases.
+- If multiple packages exist (e.g., dev, tech review), follow the one selected by `00_index.md` or the task scope; ask for clarification if unclear.
+- If the workflow package is missing or underspecified, pause and ask for guidance before proceeding.
 
 ## 3. Maintain Quality
 - Always format before committing.  
