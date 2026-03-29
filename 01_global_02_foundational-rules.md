@@ -30,3 +30,10 @@ If a rule appears to conflict with project-specific guidance, follow the stricte
 - Re-read these rules before tasks that modify design, behavior, or conventions.  
 - Update them when new preferences or shared decisions emerge.  
 - Treat them as the primary context anchor whenever session memory is lost.
+
+## 6. Never Commit `.agents/` Changes
+- The `.agents/` directory is a **shared remote repository**.
+- AI agents must **never commit changes** to `.agents/` files.
+- Committing `.agents/` changes will cause git repository confusion around submodules and sync issues.
+- Rules updates will be committed by a human or an agent with explicit instructions to do so.
+- You may modify `.agents/` files locally during a session, but never stage, commit, or push them.
