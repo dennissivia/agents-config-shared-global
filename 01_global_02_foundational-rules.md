@@ -31,9 +31,12 @@ If a rule appears to conflict with project-specific guidance, follow the stricte
 - Update them when new preferences or shared decisions emerge.  
 - Treat them as the primary context anchor whenever session memory is lost.
 
-## 6. Never Commit `.agents/` Changes
-- The `.agents/` directory is a **shared remote repository**.
-- AI agents must **never commit changes** to `.agents/` files.
-- Committing `.agents/` changes will cause git repository confusion around submodules and sync issues.
-- Rules updates will be committed by a human or an agent with explicit instructions to do so.
-- You may modify `.agents/` files locally during a session, but never stage, commit, or push them.
+## 6. `.agents/` Commit Rules
+- `.agents/shared/` contains **standalone shared rule repositories** with their own remote histories.
+  - AI agents must **never stage, commit, or push** changes to `.agents/shared/` files.
+  - Committing `.agents/shared/` changes from the host repository will cause repository-management conflicts.
+  - You may modify `.agents/shared/` files locally during a session for immediate effect, but never commit them.
+  - Changes to shared rules will be committed by a human or an agent with explicit instructions to do so.
+- `.agents/local/` is part of the **main repository** and can be committed normally.
+  - Follow the same git workflow as any other project file (feature branch, quality checks, etc.).
+  - Local rules are project-specific and safe to stage, commit, and push.

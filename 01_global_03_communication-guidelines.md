@@ -54,6 +54,17 @@ Example tone:
 - Keep messages well-structured (lists, short sections).
 - Emojis are allowed only when user-appropriate; default to none.
 
+## 9. Workflow Command Documentation
+- When workflow instructions, handoff notes, or rule files include concrete commands,
+  present them with the surrounding intent instead of as raw command dumps.
+- Prefer this structure when the command is part of a defined workflow step:
+  - **Action**: the abstract step or checkpoint being performed
+  - **Purpose**: why the command is being run or what it validates
+  - **Command**: the exact command to execute
+- A compact one-line form is acceptable when the meaning remains obvious.
+- Local or shared workflow files may define the exact repository-specific commands,
+  but the communication pattern stays global.
+
 ---
 
 These conventions ensure communication that is respectful, predictable, and aligned with professional software development collaboration.
