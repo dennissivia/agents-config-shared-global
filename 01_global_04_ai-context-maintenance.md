@@ -11,6 +11,21 @@ The `.agents/` rules are a living system that defines expectations for behavior,
 
 ---
 
+## When the Human Hands Back Work
+- When the human hands work back after a pause, merge, PR review, or interrupted
+  turn, re-read the compiled `.agents/` rules before continuing.
+- This applies even when the agent has recent conversational context. The
+  compiled rules are the current workflow contract and must be refreshed before:
+  - implementing more code,
+  - processing PR review feedback,
+  - running persistence or review-publication operations,
+  - changing quality-assurance or workflow rules.
+- After re-reading, continue from the repository state and the active workflow
+  phase. Do not skip required triage, quality assurance,
+  persistence-prep confirmation, or review steps.
+
+---
+
 ## When Learning New Preferences
 - Update the relevant `.agents/` file immediately.
 - Keep the numeric structure stable: add new files instead of renumbering existing ones.
